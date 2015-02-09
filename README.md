@@ -12,13 +12,15 @@ Routed.use(queries('&')) // set queries separator
 ## Example
 
 ```js
-// hash: #/index?name=routed!!author=switer
+/* hash: #/index?name=routed!!author=switer */
 
 Routed.use(queries('!!'))
+
 Routed(function (ctx) {
     ctx.queries // --> {name: "routed", author: "switer"}
 })
 
+```
 
 ## License
 
