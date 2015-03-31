@@ -12,6 +12,6 @@ function parseQuery(h, sep) {
 
 module.exports = function (sep) {
     return function (ctx) {
-        ctx.queries = parseQuery(ctx.path, sep || '&')
+        ctx.queries = parseQuery(ctx.path.split('?')[1] || '', sep || '&')
     }
 }
